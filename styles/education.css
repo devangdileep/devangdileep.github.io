@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background: transparent;
+    background-color: #111;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.navbar-items{
+    display: flex;
+    gap: 40px;
+    margin-right: 10px;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar-items a:hover {
+    color: #3c3b3b;
+}
+.education-table {
+    display: flex;
+    font-family: monospace;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #838282;
+    padding: 10px 10px;
+    flex-grow: 1;
+}
+.education-table table,td,th {
+    border: 5px solid #838282;
+    padding: 20px 20px;
+    border-radius: 10%;
+    border-collapse: collapse;
+}
+.edu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    margin-top: 4%;
+    font-family: monospace;
+    color: white;
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+    color: white;
+}
+.footer h3 {
+    font-family: monospace;
+    font-size: 15px;
+}
