@@ -18,6 +18,7 @@ body {
     padding: 5px 40px;
     background: transparent;
     background-color: #111;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -28,6 +29,7 @@ body {
     display: flex;
     gap: 40px;
     margin-right: 10px;
+    flex-wrap: wrap;
 }
 
 .navbar-items a {
@@ -44,38 +46,40 @@ body {
 
 .home-ctn {
     margin-left: 6rem;
+    margin-right: 2rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     font-family: monospace;
     flex-direction: row;
     flex-grow: 1;
 }
 
 .left-elm {
-    margin-top: 20%;
-
+    margin-top: 5%;
 }
 
 .left-elm h2 {
     color: white;
     margin-bottom: 30px;
-    font-size: 45px;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
 }
 .left-elm h1 {
     color: white;
-    font-size: 50px;
-
+    font-size: clamp(1.8rem, 5vw, 3.1rem);
 }
-.profile-elm {
-    margin-right: 10rem;
-    margin-top: 30%;
 
+.profile-elm {
+    margin-right: 4rem;
+    margin-top: 5%;
+    flex-shrink: 0;
 }
 .profile-elm img {
     border: 2px double #343434;
     background-color: #151414;
     border-radius: 50%;
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
 }
 
 .footer {
@@ -89,4 +93,61 @@ body {
 .footer h3 {
     font-family: monospace;
     font-size: 15px;
+    text-align: center;
+}
+
+/* ===== Tablet (max-width: 768px) ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 20px;
+    }
+    .navbar-items {
+        gap: 20px;
+    }
+    .home-ctn {
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+    .profile-elm {
+        margin-right: 1rem;
+    }
+}
+
+/* ===== Mobile (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+    .navbar-items {
+        gap: 15px;
+        margin-right: 0;
+        justify-content: center;
+    }
+    .navbar-items a {
+        font-size: 14px;
+    }
+    .home-ctn {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    .left-elm {
+        margin-top: 2rem;
+    }
+    .profile-elm {
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .profile-elm img {
+        width: 180px;
+    }
+    .footer h3 {
+        font-size: 13px;
+    }
 }
