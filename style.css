@@ -37,11 +37,12 @@ body {
     color: white;
     font-family: monospace;
     font-size: 16px;
-    transition: 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .navbar-items a:hover {
-    color: #3c3b3b;
+    color: #ff9800;
+    transform: scale(1.1);
 }
 
 .home-ctn {
@@ -53,6 +54,18 @@ body {
     font-family: monospace;
     flex-direction: row;
     flex-grow: 1;
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .left-elm {
@@ -80,6 +93,18 @@ body {
     border-radius: 50%;
     width: clamp(150px, 20vw, 300px);
     height: auto;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .footer {
@@ -89,11 +114,16 @@ body {
     background-color: #111;
     padding: 20px;
     color: white;
+    animation: fadeIn 2s ease-in;
 }
-.footer h3 {
-    font-family: monospace;
-    font-size: 15px;
-    text-align: center;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===== Tablet (max-width: 768px) ===== */
