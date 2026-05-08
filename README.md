@@ -12,7 +12,7 @@ This website serves as my personal portfolio, showcasing my introduction, educat
 
 ## Live Website
 
-🔗 [devangdileep.me](https://devangdileep.me)
+🔗 [devangdileep.github.io](https://devangdileep.github.io/)
 
 ---
 
